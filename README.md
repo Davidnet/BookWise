@@ -88,5 +88,5 @@ The project includes a key Cloud Function for Firebase that integrates with the 
 ### `onBookWriteCreateEmbedding`
 
 -   **Purpose**: This function automatically generates a vector embedding for a book's notes whenever the notes are added or updated in Firestore.
--   **Trigger**: The function is triggered by `onWrite` events on documents in the `/users/{userId}/books/{bookId}` collection.
+-   **Trigger**: The function is triggered by `onWrite` events on documents in the `/users/{userId}/books/{bookId}` collection. For example, a real document path could be `/users/123/books/456`.
 -   **Details**: When a book's `notes` field is modified, the function uses a Genkit embedder to create a 768-dimensional vector embedding of the notes. This embedding is then stored in the `embedding` field of the same document, enabling vector-based similarity searches.
