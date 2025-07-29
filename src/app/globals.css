@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Literata', serif;
+}
+
+@layer base {
+  :root {
+    --background: 64 83% 91%; /* Warm Cream */
+    --foreground: 120 60% 15%; /* Dark Forest Green */
+    
+    --card: 64 80% 96%;
+    --card-foreground: 120 60% 15%;
+    
+    --popover: 64 80% 96%;
+    --popover-foreground: 120 60% 15%;
+    
+    --primary: 120 60% 34%; /* Forest Green */
+    --primary-foreground: 60 40% 98%;
+    
+    --secondary: 120 20% 80%;
+    --secondary-foreground: 120 60% 15%;
+    
+    --muted: 120 20% 85%;
+    --muted-foreground: 120 25% 45%;
+    
+    --accent: 45 62% 52%; /* Soft Gold */
+    --accent-foreground: 45 90% 10%;
+    
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    
+    --border: 120 20% 78%;
+    --input: 120 20% 88%;
+    --ring: 120 60% 34%;
+    
+    --radius: 0.5rem;
+  }
+ 
+  .dark {
+    --background: 120 10% 10%;
+    --foreground: 64 83% 91%;
+
+    --card: 120 10% 15%;
+    --card-foreground: 64 83% 91%;
+
+    --popover: 120 10% 10%;
+    --popover-foreground: 64 83% 91%;
+
+    --primary: 120 60% 45%;
+    --primary-foreground: 60 40% 98%;
+
+    --secondary: 120 10% 25%;
+    --secondary-foreground: 64 83% 91%;
+
+    --muted: 120 10% 25%;
+    --muted-foreground: 64 80% 70%;
+
+    --accent: 45 62% 62%;
+    --accent-foreground: 45 90% 10%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 120 10% 25%;
+    --input: 120 10% 25%;
+    --ring: 120 60% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
